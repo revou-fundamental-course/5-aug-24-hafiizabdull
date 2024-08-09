@@ -1,1 +1,7 @@
-<!--ini css -->
+.container {
+    text-align: center;
+}
+
+main {
+    display: flex;
+}
