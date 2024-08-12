@@ -8,8 +8,10 @@ body{
 }
 
 main {
+
     display: flex;
 }
+
 
 .number {
     width: 100%;
@@ -54,6 +56,13 @@ button {
 form {
     background-color: #d2f5ff;
     padding: 8px;
+}
+
+.hasil {
+    text-align: center;
+    background-color:#d2f5ff ;
+    padding: 8px;
+    border-radius: 2px;
 }
 
 .footer-p {
