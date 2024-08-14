@@ -1,17 +1,40 @@
 body{
-    background-color: #0ea9f1;
+    background: linear-gradient(320deg, #0ea9f1, #00c3f2, #00d9da, #37eab3 ,#a4f58a);
     font-family: Arial, Helvetica, sans-serif;
+    
 }
 
 .container {
     text-align: center;
+    color: #d2f5ff;
+}
+
+.p-1 {
+    font: 20px sans-serif;
+    word-spacing:1px;
+}
+
+.p-2 {
+    word-spacing:normal;
+    font: 20px sans-serif;
 }
 
 main {
-
     display: flex;
+  
+}
+ 
+.tinggi {
+    position: relative;
 }
 
+#height-alert {
+    font: 15px sans-serif;
+    margin-left: 8px;
+    margin-top: 0;
+    text-decoration: underline;
+    color: red;
+}
 
 .number {
     width: 100%;
@@ -36,26 +59,50 @@ button {
 }
 
 .btn {
-    margin-top: 10px;
+    display: flex;
+    gap: 4px;
+    margin-top: 15px;
+    margin-left: 4px;
+    margin-bottom: 4px;
 }
 
 .hitung-btn {
+    cursor: pointer;
+    font-weight: bold;
     background-color: #0ea9f1;
     color: white;
     padding: 8px;
     border-radius: 4px;
 }
 
+.hitung-btn:hover {
+    background-color: white;
+    color: #0ea9f1;
+    padding: 8px;
+    border-radius: 4px;
+    transition: 0.5s all ease-in-out;
+}
 .reset-btn {
+    cursor: pointer;
+    font-weight: bold;
     background-color: #0075b9;
     color: white;
     padding: 8px;
     border-radius: 4px;
 }
 
-form {
+.reset-btn:hover {
+    background-color:ghostwhite;
+    color: #0ea9f1;
+    padding: 8px;
+    border-radius: 4px;
+    transition: 0.5s all ease-in-out;
+}
+
+.form {
     background-color: #d2f5ff;
     padding: 8px;
+    border-radius: 4px;
 }
 
 .hasil {
@@ -65,7 +112,17 @@ form {
     border-radius: 2px;
 }
 
+.hasil-p {
+    word-spacing:normal;
+    font: 20px sans-serif;
+}
+
+#hasil-akhir {
+    display: none;
+}
+
 .footer-p {
     text-align: center;
+
 }
 

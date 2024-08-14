@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css\styles.css">
+    <title>BMI Calculator</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                     hitung sekarang di BMI Calculator.</p>
             </article>
 
-            <form>
+            <div class="form">
                 <div>
                     <h3>Jenis Kelamin</h3>
                     <input type="radio" id="pria" name="jenis-kelamin" value="pria" />
@@ -32,21 +32,22 @@
                 </div>
                 <div>
                     <h3>Berat Badan (kg)</h3>
-                    <input type="number" class="number" id="weight"/>
+                    <input type="number" class="number" id="weight" placeholder="Berapa Berat Badan Kamu" />
                 </div>
                 <div>
                     <h3>Usia (tahun)</h3>
-                    <input type="number" class="number" id="age"/>
+                    <input type="number" class="number" id="age" placeholder="Berapa Usia Kamu" />
                 </div>
-                <div>
+                <div class="tinggi">
                     <h3>Tinggi Badan (cm)</h3>
-                    <input type="number" class="number" id="height"/>
+                    <input type="number" class="number" id="height" placeholder="Berapa Tinggi Badan Kamu" />
+                    <p id="height-alert"></p>
                 </div>
                 <div class="btn">
                     <button class="hitung-btn" onclick="calculateBMI()">Hitung BMI</button>
-                    <button class="reset-btn">Reset</button>
+                    <button class="reset-btn" onclick="location.reload()">Reset</button>
                 </div>
-            </form>
+            </div>
 
             <article>
                 <header>
@@ -72,36 +73,41 @@
         </aside>
 
         <aside class="right-aside">
-            <header>
-                <h3>Hasil</h3>
-            </header>
-            <section class="hasil">
-                <p>berat badan lebih</p>
-                <h3 id="result"></h3>
-                <p>anda memiliki berat badan berlebih</p>
-            </section>
+            <div id="hasil-akhir">
+                <header>
+                    <h3>Hasil</h3>
+                </header>
+                <section class="hasil hasil-p">
+                    <p id="kategori"></p>
+                    <h3 id="result"></h3>
+                    <p id="type"></p>
+                </section>
+                <section class="hasil-p">
+                    <p id="hasil-bmi"></p>
+                    <p id="jenis"></p>
+                    <p id="solusi"></p>
+                    <p id="alert"></p>
+                </section>
+            </div>
+
             <section>
-                <p>Hasil BMI diantara</p>
-                <p>Anda berada dalam kategori overweight atau berat badan berlebih.</p>
-                <p>Cara terbaik untuk menurunkan berat badan adalah dengan mengatur kalor makanan yang dikonsumsi dan
-                    berolahraga.
-                </p>
-                <p>Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga
-                    batas normal.</p>
-            </section>
-            <section>
-                <p>BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko penyakit
+                <p class="p-2">BMI tidak sepenuhnya mewakili diagnosis menyeluruh dari kesehatan tubuh dan resiko
+                    penyakit
                     seseorang. Anda perlu konsultasi lebih lanjut mengenai resiko dan kekhawatiran Anda terkait dengan
-                    berat badan Anda</p>
+                    berat badan Anda.</p>
             </section>
 
         </aside>
     </main>
 
-    <footer>
-        <p class="footer-p">Beberapa penyakit berasal dari kegemukan</p>
+    <footer class="footer-p">
+        <p>Beberapa penyakit berasal dari kegemukan.</p>
+        <p>Diabetes</p>
+        <p> Hipertensi</p>
+        <p>Sakit Jantung</p>
+        <p>Osteoarthritis</p>
     </footer>
 </body>
-<script src="js/script.js"></script>/>
+<script src="js/script.js"></script>
 
 </html>
