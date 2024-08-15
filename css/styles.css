@@ -1,39 +1,38 @@
 body{
     background: linear-gradient(320deg, #0ea9f1, #00c3f2, #00d9da, #37eab3 ,#a4f58a);
     font-family: Arial, Helvetica, sans-serif;
-    
 }
-
+/* INI Styling Container */
 .container {
     text-align: center;
     color: #d2f5ff;
 }
+/* INI Styling Container END*/
 
+/* INI Styling yang ADA di MAIN */
+main {
+    display: flex;
+    margin-top: 20px;
+}
+/* INI Styling yang ada di left-aside */
+.left-aside {
+    margin: 10px;
+}
+/* INI Styling Article Pertama */
 .p-1 {
     font: 20px sans-serif;
     word-spacing:1px;
 }
-
-.p-2 {
-    word-spacing:normal;
-    font: 20px sans-serif;
+/* INI Styling Article Pertama END*/
+/* INI Styling FORM INPUT */
+.form {
+    background-color: #d2f5ff;
+    padding: 8px;
+    border-radius: 4px;
 }
 
-main {
-    display: flex;
-  
-}
- 
-.tinggi {
-    position: relative;
-}
-
-#height-alert {
-    font: 15px sans-serif;
-    margin-left: 8px;
-    margin-top: 0;
-    text-decoration: underline;
-    color: red;
+.form-main {
+    padding: 0 10px;
 }
 
 .number {
@@ -46,24 +45,28 @@ main {
     box-sizing: border-box;
 }
 
-.left-aside {
-    margin: 10px;
+.tinggi {
+    position: relative;
 }
 
-.right-aside {
-    margin: 10px;
+#height-alert {
+    font: 15px sans-serif;
+    margin-left: 8px;
+    margin-top: 0;
+    text-decoration: underline;
+    color: red;
 }
-
-button {
-    border: none;
-}
-
+/* INI Styling BUTTON */
 .btn {
     display: flex;
     gap: 4px;
     margin-top: 15px;
     margin-left: 4px;
     margin-bottom: 4px;
+}
+
+button {
+    border: none;
 }
 
 .hitung-btn {
@@ -98,11 +101,20 @@ button {
     border-radius: 4px;
     transition: 0.5s all ease-in-out;
 }
-
-.form {
-    background-color: #d2f5ff;
-    padding: 8px;
-    border-radius: 4px;
+/* INI Styling BUTTON END*/ /* INI Styling FORM INPUT END */
+/* INI Styling Article dibawah FORM */
+.fitur-1 {
+    font: 18px sans-serif;
+    word-spacing:1px;
+}
+/* INI Styling Article dibawah FORM END*/ /* INI Styling yang ada di left-aside END */
+/* INI Styling yang ada di right-aside */
+.right-aside {
+    margin: 10px;
+}
+/* INI Styling HASIL KALKULASI BMI */
+#hasil-akhir {
+    display: none;
 }
 
 .hasil {
@@ -116,13 +128,129 @@ button {
     word-spacing:normal;
     font: 20px sans-serif;
 }
+/* INI Styling HASIL KALKULASI BMI END */
+/* INI Styling RUMUS BMI*/
+.bmi-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #f9f871;
+    padding: 20px;
+    border-radius: 10px;
+    width: 600px;
+}
 
-#hasil-akhir {
-    display: none;
+h1 {
+    text-align: center;
+}
+
+.bmi-table {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50%;
+    background-color: #b8e067;
+    border: 2px solid #304900;
+    color: #436500;
+    font-weight: bold;
+}
+
+.td-bmi {
+    padding: 20px;
+}
+
+.category-table {
+    border-collapse: collapse;
+    border: 2px solid  #00651e;
+    margin: auto;
+    margin-top: 20px;
+}
+
+.bmi-category{ 
+    background-color: #00fdd7;
+    font-family: 'Times New Roman', Times, serif; 
+}
+
+.th-td {
+    padding: 10px;
+    text-align: center;
+    border-bottom: 1px solid white;
+}
+
+.underweight {
+    background-color: rgb(117, 162, 253);
+    color: rgb(0, 33, 100);
+    font-weight: bold;
+}
+
+.normal-weight {
+    background-color: rgb(121, 255, 119);
+    color:  rgb(0, 102, 0);
+    font-weight: bold;
+}
+
+.overweight {
+    background-color: rgb(255, 204, 108);
+    color: rgb(125, 81, 0);
+    font-weight: bold;
+}
+
+.obesity {
+    background-color: rgb(255, 96, 96);
+    color: rgb(84, 0, 0);
+    font-weight: bold;
+} 
+/* INI Styling RUMUS BMI END*/
+/* INI Paragraf di bawah Rumus BMI*/
+.p-2 {
+    word-spacing:normal;
+    font: 20px sans-serif;
+}
+/* INI Paragraf di bawah Rumus BMI END*/
+/* INI Styling yang ada di right-aside END */ /* INI Styling yang ADA di MAIN END */
+
+/* INI Styling yang ADA di Footer */
+.footer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer-p {
+    background: linear-gradient(320deg, #0ea9f1,#00c3f2, #00d9da, #37eab3, #a4f58a);
+    color: rgb(0, 75, 112);
+    width: 50%;
+    height: 50%;
     text-align: center;
-
+    font-weight: bold;
+    padding: 8px;
+    border-radius: 10px;
 }
 
+.footer-h3 {
+    text-align: center;
+    font-size: small;
+    color: white;
+    font-weight: 400;
+    padding-top: 8px;
+}
+/* INI Styling yang ADA di Footer END */
+
+/* INI Responsive */
+@media only screen and ( max-width: 480px ){
+    main {
+        display: flex;
+        flex-direction: column;
+        width: auto;
+    }
+    aside {
+        display: flex;
+        flex-direction: column;
+    }
+    .p-1 {
+        text-align: center;
+        word-spacing: normal;
+    }
+}

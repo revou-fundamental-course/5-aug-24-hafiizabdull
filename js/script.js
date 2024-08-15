@@ -1,18 +1,23 @@
 function calculateBMI() {
+    // ini ambil data Input Berat badan Usia dan Tinggi badan
     const weight = parseFloat(document.getElementById("weight").value);
     const height = parseFloat(document.getElementById("height").value);
+    const age = parseFloat(document.getElementById("age").value);
+    // pemanggilan function endResult() untuk Hasil Kalkulasi BMI
     endResult()
-
-    if (isNaN(weight) || isNaN(height) || height <= 0) {
-        document.getElementById("height-alert").innerHTML = "Masukkan berat dan tinggi badan anda dengan benar.";
+    // ini kondisi if Jika data yang dimasukkan ke input tidak sesuai maka akan keluar pemberitahuan
+    if (isNaN(weight) || isNaN(height) || isNaN(age) || height <= 0 || weight <= 0 || age <= 0) {
+        document.getElementById("height-alert").innerHTML = "Masukkan usia berat dan tinggi badan anda dengan benar.";
         return;
     }
 
+    // kalkulasi untuk mengubah data input Tinggi Badan dari CentiMeter ke Meter
     const meter = height / 10 / 10
+    // Rumus Kalkulasi BMI
     const bmi = weight / (meter * meter)
-
+    // variable untuk Kategori BMI
     let category = "";
-
+    // kondisi if else yang akan mengeluarkan valuenya ke variable "category"
     if (bmi < 18.5) {
         category = "Underweight";
     } else if (bmi >= 18.5 && bmi < 24.9) {
@@ -22,9 +27,9 @@ function calculateBMI() {
     } else {
         category = "Obese";
     }
-
+    // variable tipe BMI
     let tipe = "";
-
+    // kondisi if else yang akan mengeluarkan valuenya ke variable "tipe"
     if (bmi < 18.5) {
         tipe = "Anda Kekurangan Berat Badan";
     } else if (bmi >= 18.5 && bmi < 24.9) {
@@ -34,9 +39,9 @@ function calculateBMI() {
     } else {
         tipe = "Anda Obesitas";
     }
-
+    // variable hasilBMI yang akan mengeluarkan data diantara Hasil BMI
     let hasilBMI = "";
-
+    // kondisi if else yang akan mengeluarkan valuenya ke variable "hasilBMI"
     if (bmi >= 18 && bmi < 19) {
         hasilBMI = "17 dan 19";
     } else if (bmi >= 19 && bmi < 20) {
@@ -64,9 +69,9 @@ function calculateBMI() {
     } else {
         hasilBMI = "29 dan 31";
     }
-
+    // variable solution akan mengeluarkan Solusi sesuai Hasil BMI
     let solution = "";
-
+    // kondisi if else yang akan mengeluarkan valuenya ke variable "solution"
     if (bmi < 18.5) {
         solution = "Cara terbaik untuk meningkatkan berat badan adalah memberbanyak asupan kalori dengan memakan makanan yang bergizi dan berolahraga";
     } else if (bmi >= 18.5 && bmi < 24.9) {
@@ -76,9 +81,9 @@ function calculateBMI() {
     } else {
         solution = "Cara terbaik untuk menurunkan berat badan adalah dengan mengurangi asupan kalori makanan yang dikonsumsi dan berolahraga.";
     }
-
+    // variable alert akan mengeluarkan peringatan pada hasil BMI tertentu
     let alert = "";
-
+    // kondisi if else yang akan mengeluarkan valuenya ke variable "alert"
     if (bmi >= 25) {
         alert = "Jika BMI Anda berada dalam kategori ini maka Anda dianjurkan untuk menurunkan berat badan hingga batas normal."
     } else {
@@ -87,7 +92,7 @@ function calculateBMI() {
 
 
 
-
+    // data ini akan keluar di HTML Ketika user telah menghitung BMI mereka
     document.getElementById("kategori").innerHTML = `${category}`
     document.getElementById("result").innerHTML = `${bmi.toFixed(2)}`
     document.getElementById("type").innerHTML = `${tipe}`
@@ -98,9 +103,9 @@ function calculateBMI() {
     document.getElementById("alert").innerHTML = `${alert}`
 
 }
-
+// pengambilan data hasil akhir
 const hasilAkhir = document.getElementById("hasil-akhir")
-
+// jika Function calculateBMI() Telah di Klik, maka hasil kalkulasi BMI akan muncul, jika tidak di Klik makan tidak akan muncul
 function endResult() {
     if (calculateBMI) {
         hasilAkhir.style.display = "block"
